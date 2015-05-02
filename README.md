@@ -4,7 +4,9 @@ UITextField-Shake is a swift implemtation of [UITextField-Shake](https://github.
 
 Usage
 --------------------
-```objc
+Add the File named 'UITextField+Shake.swift' to your working project and implement the method shown below
+
+```swift
 // Shake with the default speed
 self.textField.shake(10, delta:5) //10 no. of shakes with 5 points wide
 
@@ -19,6 +21,10 @@ self.sampleText.shake(10, delta: 5.0, speed: 0.10, completionHandler: {
             // your code
         })
 ```
+
+Yet to add
+==========
+Cocoapods spec
 
 MIT License
 ==================
