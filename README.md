@@ -1,7 +1,6 @@
 UITextField+Shake
 =============
-This is a https://github.com/andreamazz/UITextField-Shake/blob/master/README.md#setup-with-cocoapods
-UITextField extension for swift that adds a shake animation like the password field of the OsX login screen. 
+UITextField-Shake is a swift implemtation of [UITextField-Shake](https://github.com/andreamazz/UITextField-Shake). It adds shake animation like the password field of the OsX login screen. 
 
 Usage
 --------------------
