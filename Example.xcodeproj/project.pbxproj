@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18DE47331AF76D0400B4251B /* UITextField+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE47321AF76D0400B4251B /* UITextField+Shake.swift */; };
 		18EB2C8F1AF4B92E0045AF07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB2C8E1AF4B92E0045AF07 /* AppDelegate.swift */; };
 		18EB2C911AF4B92E0045AF07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB2C901AF4B92E0045AF07 /* ViewController.swift */; };
 		18EB2C941AF4B92E0045AF07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18EB2C921AF4B92E0045AF07 /* Main.storyboard */; };
 		18EB2C961AF4B92E0045AF07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18EB2C951AF4B92E0045AF07 /* Images.xcassets */; };
 		18EB2C991AF4B92E0045AF07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB2C971AF4B92E0045AF07 /* LaunchScreen.xib */; };
 		18EB2CA51AF4B92E0045AF07 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB2CA41AF4B92E0045AF07 /* ExampleTests.swift */; };
-		18EB2CB01AF4B96C0045AF07 /* UITextField+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB2CAF1AF4B96C0045AF07 /* UITextField+Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18DE47321AF76D0400B4251B /* UITextField+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Shake.swift"; sourceTree = "<group>"; };
 		18EB2C891AF4B92E0045AF07 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB2C8D1AF4B92E0045AF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EB2C8E1AF4B92E0045AF07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		18EB2C9E1AF4B92E0045AF07 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EB2CA31AF4B92E0045AF07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18EB2CA41AF4B92E0045AF07 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
-		18EB2CAF1AF4B96C0045AF07 /* UITextField+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Shake.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18DE47311AF76D0400B4251B /* UITextField-Shake */ = {
+			isa = PBXGroup;
+			children = (
+				18DE47321AF76D0400B4251B /* UITextField+Shake.swift */,
+			);
+			path = "UITextField-Shake";
+			sourceTree = "<group>";
+		};
 		18EB2C801AF4B92E0045AF07 = {
 			isa = PBXGroup;
 			children = (
-				18EB2CAE1AF4B96C0045AF07 /* UITExtField-Shake */,
+				18DE47311AF76D0400B4251B /* UITextField-Shake */,
 				18EB2C8B1AF4B92E0045AF07 /* Example */,
 				18EB2CA11AF4B92E0045AF07 /* ExampleTests */,
 				18EB2C8A1AF4B92E0045AF07 /* Products */,
@@ -113,14 +121,6 @@
 				18EB2CA31AF4B92E0045AF07 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		18EB2CAE1AF4B96C0045AF07 /* UITExtField-Shake */ = {
-			isa = PBXGroup;
-			children = (
-				18EB2CAF1AF4B96C0045AF07 /* UITextField+Shake.swift */,
-			);
-			path = "UITExtField-Shake";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,8 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DE47331AF76D0400B4251B /* UITextField+Shake.swift in Sources */,
 				18EB2C911AF4B92E0045AF07 /* ViewController.swift in Sources */,
-				18EB2CB01AF4B96C0045AF07 /* UITextField+Shake.swift in Sources */,
 				18EB2C8F1AF4B92E0045AF07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
