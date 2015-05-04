@@ -11,6 +11,8 @@ Pod::Spec.new do |spec|
     spec.author            = {
         'Rugmangathan' => 'mkrugmangathan@gmail.com'
     }
+
+    spec.platform     = :ios, "8.0"
     spec.source            = {
         :git => 'https://github.com/RMK19/UITextField-Shake.git',
         :tag => spec.version.to_s
