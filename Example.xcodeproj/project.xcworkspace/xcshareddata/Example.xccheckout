@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A7A9B133-386D-46B2-A73E-30B783FC397F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Example</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DEDFA921C570425C03240B6F641C6F911A8689CF</key>
+		<string>https://github.com/RMK19/UITextField-Shake.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DEDFA921C570425C03240B6F641C6F911A8689CF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RMK19/UITextField-Shake.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DEDFA921C570425C03240B6F641C6F911A8689CF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DEDFA921C570425C03240B6F641C6F911A8689CF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UITextField-Shake</string>
+		</dict>
+	</array>
+</dict>
+</plist>
