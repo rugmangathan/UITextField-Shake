@@ -2,7 +2,9 @@ UITextField+Shake
 =============
 UITextField-Shake is a swift implemtation of [UITextField-Shake](https://github.com/andreamazz/UITextField-Shake). It adds shake animation like the password field of the OsX login screen. 
 
-![UITextField-Shake](https://www.dropbox.com/s/77fpap3xiv33vuv/UITextField-Shake.gif)
+Screenshot
+===========
+![](./UITextField-Shake.gif)
 
 Usage
 ----------
