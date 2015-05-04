@@ -1,21 +1,21 @@
-Pod::Spec.new do |s|
+Pod::Spec.new do |spec|
 
-    s.name              = 'UITextField-Shake'
-    s.version           = '1.0'
-    s.summary           = 'UITextField-Shake adds shake animation like the password field of the OsX login screen.'
-    s.homepage          = 'https://github.com/RMK19/UITextField-Shake.git'
-    s.license           = {
+    spec.name              = 'UITextField-Shake'
+    spec.version           = '1.0'
+    spec.summary           = 'UITextField-Shake adds shake animation like the password field of the OsX login screen.'
+    spec.homepage          = 'https://github.com/RMK19/UITextField-Shake.git'
+    spec.license           = {
         :type => 'MIT',
         :file => 'LICENSE'
     }
-    s.author            = {
+    spec.author            = {
         'Rugmangathan' => 'mkrugmangathan@gmail.com'
     }
-    s.source            = {
+    spec.source            = {
         :git => 'https://github.com/RMK19/UITextField-Shake.git',
-        :tag => s.version.to_s
+        :tag => spec.version.to_s
     }
-    s.source_files      = '*.{swift}'
-    s.requires_arc      = true
+    spec.source_files      = 'UITextField-Shake', 'UITextField-Shake/*.{swift}'
+    spec.requires_arc      = true
 
 end
