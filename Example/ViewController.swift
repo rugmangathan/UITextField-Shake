@@ -8,41 +8,54 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet var noOfShakesText: UITextField!
     @IBOutlet var shakeSpeedText: UITextField!
     @IBOutlet var shakeDistanceText: UITextField!
     @IBOutlet var sampleText: UITextField!
-    @IBAction func shake(_ sender: UIButton) {
-        let time = (self.noOfShakesText.text! as NSString).integerValue
-        let delta = CGFloat((self.shakeDistanceText.text! as NSString).floatValue)
-        let speed = (self.shakeSpeedText.text! as NSString).doubleValue
-        
-        self.sampleText.shake(time, delta: delta, speed: speed, completionHandler:nil)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textFieldsArray: NSArray = [self.noOfShakesText, self.shakeSpeedText, self.shakeDistanceText, self.sampleText]
-        textFieldsArray.enumerateObjects(using: { (object, index, stop) -> Void in
-            (object as AnyObject).layer.borderWidth = 1.0;
-            (object as AnyObject).layer.borderColor = UIColor(red: 88.0 / 255.0, green: 87.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0).cgColor
-        })
+        let textFieldsArray: [UITextField] = [noOfShakesText,
+                                        shakeSpeedText,
+                                        shakeDistanceText,
+                                        sampleText]
+
+        _ = textFieldsArray.map {
+            $0.layer.borderColor = UIColor(red: 88.0 / 255.0,
+                                           green: 87.0 / 255.0,
+                                           blue: 84.0 / 255.0,
+                                           alpha: 1.0).cgColor
+            $0.layer.borderWidth = 1.0
+        }
+
         noOfShakesText.text = "10"
         shakeDistanceText.text = "10"
         shakeSpeedText.text = "0.05"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func shake(_ sender: UIButton) {
+
+        guard let noOfShakes = noOfShakesText.text else { return }
+        guard let shakeDistance = shakeDistanceText.text else { return }
+        guard let shakeSpeed = shakeSpeedText.text else { return }
+
+        let time = (noOfShakes as NSString).integerValue
+        let delta = CGFloat((shakeDistance as NSString).floatValue)
+        let speed = (shakeSpeed as NSString).doubleValue
+
+        sampleText.shake(times: time,
+                         delta: delta,
+                         speed: speed,
+                         completionHandler: nil)
     }
-    
+}
+
+extension ViewController:  UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
 }
 
