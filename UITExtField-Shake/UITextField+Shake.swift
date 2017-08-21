@@ -10,42 +10,42 @@ import Foundation
 import UIKit
 
 enum ShakeDirection: Int {
-    case ShakeDirectionHorizontal = 0, ShakeDirectionVertical
+    case shakeDirectionHorizontal = 0, shakeDirectionVertical
 };
 
 extension UITextField {
-    func shake(times: Int, delta: CGFloat) {
-        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: 0.03, shakeDirection: ShakeDirection.ShakeDirectionHorizontal, completionHandler: nil)
+    func shake(_ times: Int, delta: CGFloat) {
+        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: 0.03, shakeDirection: ShakeDirection.shakeDirectionHorizontal, completionHandler: nil)
     }
     
-    func shake(times: Int, delta: CGFloat, completionHandler:(() -> Void)!) {
-        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: 0.03, shakeDirection: ShakeDirection.ShakeDirectionHorizontal, completionHandler: completionHandler)
+    func shake(_ times: Int, delta: CGFloat, completionHandler:(() -> Void)!) {
+        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: 0.03, shakeDirection: ShakeDirection.shakeDirectionHorizontal, completionHandler: completionHandler)
     }
     
-    public func shake(times: Int, delta: CGFloat, speed: Double){
-        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: ShakeDirection.ShakeDirectionHorizontal, completionHandler: nil)
+    public func shake(_ times: Int, delta: CGFloat, speed: Double){
+        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: ShakeDirection.shakeDirectionHorizontal, completionHandler: nil)
     }
     
-    public func shake(times: Int, delta: CGFloat, speed: Double, completionHandler:(() -> Void)!){
-        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: ShakeDirection.ShakeDirectionHorizontal, completionHandler: completionHandler)
+    public func shake(_ times: Int, delta: CGFloat, speed: Double, completionHandler:(() -> Void)!){
+        shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: ShakeDirection.shakeDirectionHorizontal, completionHandler: completionHandler)
     }
     
-    func shake(times: Int, delta: CGFloat, speed: Double, shakeDirection: ShakeDirection){
+    func shake(_ times: Int, delta: CGFloat, speed: Double, shakeDirection: ShakeDirection){
         shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: shakeDirection, completionHandler: nil)
     }
     
-    func shake(times: Int, delta: CGFloat, speed: Double, shakeDirection: ShakeDirection, completionHandler:(() -> Void)!){
+    func shake(_ times: Int, delta: CGFloat, speed: Double, shakeDirection: ShakeDirection, completionHandler:(() -> Void)!){
         shake(times, direction: 1, currentTimes: 0, withDelta: delta, andSpeed: speed, shakeDirection: shakeDirection, completionHandler: completionHandler)
     }
     
-    func shake(times: Int, direction: Int, currentTimes: Int, withDelta: CGFloat, andSpeed: Double, shakeDirection: ShakeDirection, completionHandler:(() -> Void)!){
+    func shake(_ times: Int, direction: Int, currentTimes: Int, withDelta: CGFloat, andSpeed: Double, shakeDirection: ShakeDirection, completionHandler:(() -> Void)!){
         
-        UIView.animateWithDuration(NSTimeInterval(andSpeed), animations: {
-            self.transform = (shakeDirection == ShakeDirection.ShakeDirectionHorizontal ? CGAffineTransformMakeTranslation(withDelta * CGFloat(direction), 0) : CGAffineTransformMakeTranslation(0, withDelta * CGFloat(direction)))
+        UIView.animate(withDuration: TimeInterval(andSpeed), animations: {
+            self.transform = (shakeDirection == ShakeDirection.shakeDirectionHorizontal ? CGAffineTransform(translationX: withDelta * CGFloat(direction), y: 0) : CGAffineTransform(translationX: 0, y: withDelta * CGFloat(direction)))
             }, completion: {(complete: Bool) in
                 if (currentTimes >= times) {
-                    UIView.animateWithDuration(andSpeed, animations: {
-                        self.transform = CGAffineTransformIdentity
+                    UIView.animate(withDuration: andSpeed, animations: {
+                        self.transform = CGAffineTransform.identity
                         }, completion: { (complete: Bool) in
                             if (completionHandler != nil) {
                                 completionHandler()
